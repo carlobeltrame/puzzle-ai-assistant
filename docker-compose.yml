@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  node:
+    image: node
+    user: node
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    entrypoint: ./docker-entrypoint.sh
+    command: yarn start
